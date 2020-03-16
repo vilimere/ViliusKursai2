@@ -77,15 +77,12 @@ namespace ConsoleApp1
         {
             Random rnd = new Random();
 
-<<<<<<< HEAD
+
             rnd.Next(1, 21);
 
             return rnd.Next(1, 21);
-=======
-            rnd.Next(1, 20);
 
-            return rnd.Next(1, 20);
->>>>>>> Adding3and4
+
         }
     }
 }
