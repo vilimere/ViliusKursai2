@@ -21,6 +21,8 @@ namespace ConsoleApp1
             Console.WriteLine(InRange(sk1, sk2, sk3));
 
             Console.WriteLine("Ar pirmas skaicius yra pirminis: " + IsPrimal(sk1));
+
+            Console.WriteLine("Random skaicius D20: " + D20());
         }
         static string InRange(int sk1, int sk2, int sk3)
         {
@@ -69,6 +71,15 @@ namespace ConsoleApp1
             }
 
             return true;
+        }
+
+        static int D20()
+        {
+            Random rnd = new Random();
+
+            rnd.Next(1, 20);
+
+            return rnd.Next(1, 20);
         }
     }
 }
