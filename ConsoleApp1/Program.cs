@@ -19,6 +19,10 @@ namespace ConsoleApp1
             Console.WriteLine("Is Jusu ivestu skaiciu didziausias yra: " + Max(sk1, sk2, sk3));
 
             Console.WriteLine(InRange(sk1, sk2, sk3));
+
+            Console.WriteLine("Ar pirmas skaicius yra pirminis: " + IsPrimal(sk1));
+
+            Console.WriteLine("Random skaicius D20: " + D20());
         }
         static string InRange(int sk1, int sk2, int sk3)
         {
@@ -52,6 +56,30 @@ namespace ConsoleApp1
             else
 
             { return 999999; }
+        }
+
+        static bool IsPrimal(int sk1)
+        {
+            
+
+            for (int i = 2; i < sk1 / i; i++)
+            {
+                if (sk1 % i == 0)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        static int D20()
+        {
+            Random rnd = new Random();
+
+            rnd.Next(1, 21);
+
+            return rnd.Next(1, 21);
         }
     }
 }
